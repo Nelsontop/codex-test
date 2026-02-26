@@ -959,14 +959,10 @@
     let y = 90;
 
     // header
-    drawPill(ctx, (test.meta.title || "亲密关系安全感来源测试") + " · 结果报告", pad, y, {
-      font: "900 26px " + getFontStack(),
-      bg: "rgba(255,255,255,0.70)",
-      stroke: "rgba(0,0,0,0.08)",
-      color: "rgba(0,0,0,0.60)",
-      h: 50
-    });
-    y += 90;
+    ctx.fillStyle = "rgba(0,0,0,0.60)";
+    ctx.font = "900 26px " + getFontStack();
+    ctx.fillText((test.meta.title || "亲密关系安全感来源测试") + " · 结果报告", pad, y + 36);
+    y += 76;
 
     // compute content
     let headerTitle = "";
@@ -1143,14 +1139,10 @@
     const pad = 72;
     let y = 90;
 
-    drawPill(ctx, (test.meta.title || "情绪劳动指数测试") + " · 结果报告", pad, y, {
-      font: "900 26px " + getFontStack(),
-      bg: "rgba(255,255,255,0.70)",
-      stroke: "rgba(0,0,0,0.08)",
-      color: "rgba(0,0,0,0.60)",
-      h: 50
-    });
-    y += 90;
+    ctx.fillStyle = "rgba(0,0,0,0.60)";
+    ctx.font = "900 26px " + getFontStack();
+    ctx.fillText((test.meta.title || "情绪劳动指数测试") + " · 结果报告", pad, y + 36);
+    y += 76;
 
     const a = res.archetype || {};
     const title = `情绪劳动指数：${res.ELI}（${res.tier}）`;

@@ -1371,17 +1371,6 @@
     const last = saved._last?.testKey || null;
 
     const g = el("div", {class:"grid"});
-    const intro = withFade(el("div", {class:"card pad intro"}, [
-      el("h2", {}, "选择一个测试"),
-      el("p", {}, "更像线上产品的版本：✅ 断点续答 ✅ 自动下一题 ✅ 分享链接 ✅ 下载海报 PNG。"),
-      el("div", {class:"meta"}, [
-        el("span", {class:"pill"}, "建议手机打开体验更像产品"),
-        el("span", {class:"pill"}, "可直接部署为静态站")
-      ]),
-      (last && saved[last]?.answers?.length) ? el("div", {class:"btnrow"}, [
-        el("button", {class:"btn ok", onClick:()=>resumeTest(last)}, `继续上次：${tests[last]?.meta?.title || last} →`)
-      ]) : null
-    ]));
 
     g.appendChild(testCard("relationship"));
     g.appendChild(testCard("emotional"));
@@ -1484,7 +1473,7 @@
 
     const card2 = withFade(el("div", {class:"card pad intro"}, [
       el("h2", {}, "测完你会得到这样的可晒图"),
-      el("p", {}, "建议：复制文案 → 配海报/长图 → 直接发小红书（更像线上产品）。"),
+      el("p", {}, "建议：复制文案 → 配海报/长图 → 直接发小红书。"),
       previewPoster ? posterView(previewPoster) : el("p", {}, "（题库未配置海报预览）")
     ]));
 
@@ -1726,7 +1715,7 @@
         el("p", {class:"result-sub"}, headerSub)
       ]),
       el("div", {class:"section"}, [
-        el("h3", {}, "维度概览（更像线上产品的可视化）"),
+        el("h3", {}, "维度概览"),
         el("div", {class:"grid result-overview-grid"}, [
           el("div", {class:"chart-wrap result-overview-radar"}, [
             el("div", {class:"chart-title"}, "安全感雷达图（0-100）"),

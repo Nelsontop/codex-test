@@ -1,51 +1,40 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>宠物性格测试</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="bg-blur bg-blur-a"></div>
-    <div class="bg-blur bg-blur-b"></div>
-
-    <main class="app-shell" id="appShell">
-      <section class="hero-card" id="introCard">
-        <p class="badge">Pet Persona Lab</p>
-        <h1>测测你是哪种宠物人格女孩 🐾</h1>
-        <p class="hero-copy">
-          16道趣味场景题，60秒找到你的宠物系性格：是社交修勾、优雅猫咪，还是治愈水豚？
-          完成后可获得专业风格报告与关系建议。
-        </p>
-        <div class="intro-actions">
-          <input id="userName" type="text" maxlength="20" placeholder="先告诉我你的昵称（可选）" />
-          <button id="startBtn" class="primary-btn">开始测试</button>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#11131a" />
+  <title>情绪价值测试（小红书风 Demo）</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app" id="app" data-screen="home">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">💗</div>
+        <div>
+          <div class="title">情绪价值测试</div>
+          <div class="subtitle">更像线上产品：自动下一题｜断点续答｜分享链接｜海报1080×1440｜导出长图</div>
         </div>
-      </section>
+      </div>
 
-      <section class="quiz-card hidden" id="quizCard">
-        <div class="quiz-topbar">
-          <p id="questionTag">Q1 / 16</p>
-          <div class="progress-track">
-            <div class="progress-fill" id="progressFill"></div>
-          </div>
-        </div>
+      <div class="top-actions">
+        <button id="btn-home" class="btn ghost" title="首页">首页</button>
+        <button id="btn-reset" class="btn ghost" title="重置">重置</button>
+      </div>
+    </header>
 
-        <h2 id="questionText"></h2>
+    <main id="root" class="root"></main>
 
-        <div class="option-grid">
-          <button id="optionA" class="option-btn"></button>
-          <button id="optionB" class="option-btn"></button>
-        </div>
-      </section>
+    <footer class="footer">
+      <div class="footnote">
+        仅供自我探索｜不构成心理/医学诊断。你可以把本 Demo 部署到任意静态托管（GitHub Pages / Vercel / OSS）。
+      </div>
+    </footer>
+  </div>
 
-      <section class="report-shell hidden" id="reportRoot"></section>
-    </main>
-
-    <script src="script.js"></script>
-  </body>
+  <script src="./data/relationship_security_test_v1.js"></script>
+  <script src="./data/emotional_labor_index_test_v1.js"></script>
+  <script src="./app.js"></script>
+</body>
 </html>

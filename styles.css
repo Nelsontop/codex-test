@@ -391,7 +391,7 @@ a{ color:inherit; }
     rgba(255,255,255,.03);
 }
 .poster .ptitle{ font-size: 18px; font-weight: 950; margin: 0 0 6px; }
-.poster .psub{ margin: 0 0 12px; color: var(--muted); line-height: 1.55; }
+.poster .psub{ margin: 0 0 20px; color: var(--muted); line-height: 1.55; }
 .poster .plines{ margin: 0; padding-left: 18px; line-height: 1.65; }
 .poster .ptags{ margin-top: 12px; display:flex; flex-wrap:wrap; gap: 8px; }
 .poster .ptags .tag{
